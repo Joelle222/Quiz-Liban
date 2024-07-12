@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Voyage au Liban</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #game-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
+        #question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        
+        .option-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>Le Voyage au Liban</h1>
+        <p id="question" class="fade-in"></p>
+        <div id="options"></div>
+        <p id="result"></p>
+        <button id="next-btn" style="display:none;">Question suivante</button>
+    </div>
+
+    <script>
+        const questions = [{
+            question: "Quelle est la capitale du Liban ?",
+            options: ["Tripoli", "Beyrouth", "Sidon", "Tyr"],
+            answer: 1,
+            icon: "🏙️"
+        }, {
+            question: "Quel arbre emblématique figure sur le drapeau libanais ?",
+            options: ["Olivier", "Cèdre", "Pin", "Chêne"],
+            answer: 1,
+            icon: "🌲"
+        }, {
+            question: "Quel plat libanais est fait de pois chiches écrasés, de tahini, d'huile d'olive et de jus de citron ?",
+            options: ["Taboulé", "Falafel", "Houmous", "Fattoush"],
+            answer: 2,
+            icon: "🍽️"
+        }, {
+            question: "Quelle ancienne cité phénicienne au Liban est classée au patrimoine mondial de l'UNESCO ?",
+            options: ["Baalbek", "Byblos", "Anjar", "Sidon"],
+            answer: 1,
+            icon: "🏛️"
+        }, {
+            question: "Quelle mer borde le Liban ?",
+            options: ["Mer Rouge", "Mer Noire", "Mer Méditerranée", "Mer Égée"],
+            answer: 2,
+            icon: "🌊"
+        }];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.getElementById('options');
+        const resultEl = document.getElementById('result');
+        const nextBtn = document.getElementById('next-btn');
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            questionEl.textContent = question.question;
+            questionEl.classList.remove('fade-in');
+            void questionEl.offsetWidth;
+            questionEl.classList.add('fade-in');
+
+            optionsEl.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+
+                const iconSpan = document.createElement('span');
+                iconSpan.className = 'option-icon';
+                iconSpan.textContent = question.icon;
+                optionDiv.appendChild(iconSpan);
+
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.onclick = () => checkAnswer(index);
+                optionDiv.appendChild(button);
+
+                optionsEl.appendChild(optionDiv);
+            });
+            resultEl.textContent = '';
+            nextBtn.style.display = 'none';
+        }
+
+        function checkAnswer(userAnswer) {
+            const question = questions[currentQuestion];
+            if (userAnswer === question.answer) {
+                resultEl.textContent = "Correct !";
+                score++;
+            } else {
+                resultEl.textContent = `Incorrect. La bonne réponse était : ${question.options[question.answer]}`;
+            }
+            optionsEl.querySelectorAll('button').forEach(btn => btn.disabled = true);
+            nextBtn.style.display = 'inline-block';
+        }
+
+        nextBtn.onclick = () => {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                questionEl.textContent = `Jeu terminé ! Votre score : ${score}/${questions.length}`;
+                optionsEl.innerHTML = '';
+                resultEl.textContent = '';
+                nextBtn.style.display = 'none';
+            }
+        };
+
+        loadQuestion();
+    </script>
+</body>
+
+</html>
